@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulario Animales</title>
+<style>
+    /* TU CSS ORIGINAL */
+    .vocab-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+    .vocab-table th, .vocab-table td {
+        padding: 14px 20px;
+        text-align: left;
+        border: 1px solid #ddd;
+        vertical-align: middle; /* Centra verticalmente */
+    }
+    .vocab-table th.audio-col, .vocab-table td.audio-col {
+        width: 80px; /* Reducido un poco para ajustar al botón */
+        text-align: center;
+        padding: 14px 10px;
+    }
+    .vocab-table th {
+        background-color: #34495e;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .vocab-table tbody tr:nth-child(even) { background-color: #f8f8f8; }
+    .vocab-table tbody tr:nth-child(odd) { background-color: #ffffff; }
+
+    /* NUEVO CSS PARA EL BOTÓN DE AUDIO */
+    .play-btn {
+        background-color: #3498db; /* Azul H5P */
+        border: none;
+        border-radius: 50%; /* Lo hace redondo */
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, transform 0.1s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .play-btn:hover {
+        background-color: #2980b9; /* Azul más oscuro al pasar ratón */
+        transform: scale(1.05);
+    }
+    .play-btn:active {
+        transform: scale(0.95);
+    }
+    /* El icono triangular de Play */
+    .play-btn svg {
+        width: 18px;
+        height: 18px;
+        fill: white;
+        margin-left: 2px; /* Pequeño ajuste visual óptico */
+    }
+</style>
+</head>
+<body>
+
+<table class="vocab-table">
+    <thead>
+        <tr>
+            <th>ENGLISH</th>
+            <th class="audio-col">AUDIO</th>
+            <th>ESPAÑOL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Ant</td><td class="audio-col"><audio id="aud-ant" src="ant.mp3"></audio><button class="play-btn" onclick="playAudio('aud-ant')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Hormiga</td></tr>
+        <tr><td>Bat</td><td class="audio-col"><audio id="aud-bat" src="bat.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bat')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Murciélago</td></tr>
+        <tr><td>Beaver</td><td class="audio-col"><audio id="aud-beaver" src="beaver.mp3"></audio><button class="play-btn" onclick="playAudio('aud-beaver')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Castor</td></tr>
+        <tr><td>Bee</td><td class="audio-col"><audio id="aud-bee" src="bee.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bee')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Abeja</td></tr>
+        <tr><td>Beetle</td><td class="audio-col"><audio id="aud-beetle" src="beetle.mp3"></audio><button class="play-btn" onclick="playAudio('aud-beetle')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Escarabajo</td></tr>
+        <tr><td>Butterfly</td><td class="audio-col"><audio id="aud-butterfly" src="butterfly.mp3"></audio><button class="play-btn" onclick="playAudio('aud-butterfly')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Mariposa</td></tr>
+        <tr><td>Camel</td><td class="audio-col"><audio id="aud-camel" src="camel.mp3"></audio><button class="play-btn" onclick="playAudio('aud-camel')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Camello</td></tr>
+        <tr><td>Caterpillar</td><td class="audio-col"><audio id="aud-caterpillar" src="caterpillar.mp3"></audio><button class="play-btn" onclick="playAudio('aud-caterpillar')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Oruga</td></tr>
+        <tr><td>Cat</td><td class="audio-col"><audio id="aud-cat" src="cat.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cat')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Gato</td></tr>
+        <tr><td>Cow</td><td class="audio-col"><audio id="aud-cow" src="cow.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cow')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Vaca</td></tr>
+        <tr><td>Crocodile</td><td class="audio-col"><audio id="aud-crocodile" src="crocodile.mp3"></audio><button class="play-btn" onclick="playAudio('aud-crocodile')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Cocodrilo</td></tr>
+        <tr><td>Deer</td><td class="audio-col"><audio id="aud-deer" src="deer.mp3"></audio><button class="play-btn" onclick="playAudio('aud-deer')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Ciervo</td></tr>
+        <tr><td>Dog</td><td class="audio-col"><audio id="aud-dog" src="dog.mp3"></audio><button class="play-btn" onclick="playAudio('aud-dog')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Perro</td></tr>
+        <tr><td>Dolphin</td><td class="audio-col"><audio id="aud-dolphin" src="dolphin.mp3"></audio><button class="play-btn" onclick="playAudio('aud-dolphin')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Delfín</td></tr>
+        <tr><td>Dragonfly</td><td class="audio-col"><audio id="aud-dragonfly" src="dragonfly.mp3"></audio><button class="play-btn" onclick="playAudio('aud-dragonfly')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Libélula</td></tr>
+        <tr><td>Duck</td><td class="audio-col"><audio id="aud-duck" src="duck.mp3"></audio><button class="play-btn" onclick="playAudio('aud-duck')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Pato</td></tr>
+        <tr><td>Eagle</td><td class="audio-col"><audio id="aud-eagle" src="eagle.mp3"></audio><button class="play-btn" onclick="playAudio('aud-eagle')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Águila</td></tr>
+        <tr><td>Elephant</td><td class="audio-col"><audio id="aud-elephant" src="elephant.mp3"></audio><button class="play-btn" onclick="playAudio('aud-elephant')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Elefante</td></tr>
+        <tr><td>Fox</td><td class="audio-col"><audio id="aud-fox" src="fox.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fox')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Zorro</td></tr>
+        <tr><td>Frog</td><td class="audio-col"><audio id="aud-frog" src="frog.mp3"></audio><button class="play-btn" onclick="playAudio('aud-frog')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Rana</td></tr>
+        <tr><td>Goat</td><td class="audio-col"><audio id="aud-goat" src="goat.mp3"></audio><button class="play-btn" onclick="playAudio('aud-goat')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Cabra</td></tr>
+        <tr><td>Grasshopper</td><td class="audio-col"><audio id="aud-grasshopper" src="grasshopper.mp3"></audio><button class="play-btn" onclick="playAudio('aud-grasshopper')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Saltamontes</td></tr>
+        <tr><td>Hedgehog</td><td class="audio-col"><audio id="aud-hedgehog" src="hedgehog.mp3"></audio><button class="play-btn" onclick="playAudio('aud-hedgehog')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Erizo</td></tr>
+        <tr><td>Horse</td><td class="audio-col"><audio id="aud-horse" src="horse.mp3"></audio><button class="play-btn" onclick="playAudio('aud-horse')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Caballo</td></tr>
+        <tr><td>Jellyfish</td><td class="audio-col"><audio id="aud-jellyfish" src="jellyfish.mp3"></audio><button class="play-btn" onclick="playAudio('aud-jellyfish')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Medusa</td></tr>
+        <tr><td>Kangaroo</td><td class="audio-col"><audio id="aud-kangaroo" src="kangaroo.mp3"></audio><button class="play-btn" onclick="playAudio('aud-kangaroo')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Canguro</td></tr>
+        <tr><td>Koala</td><td class="audio-col"><audio id="aud-koala" src="koala.mp3"></audio><button class="play-btn" onclick="playAudio('aud-koala')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Koala</td></tr>
+        <tr><td>Leopard</td><td class="audio-col"><audio id="aud-leopard" src="leopard.mp3"></audio><button class="play-btn" onclick="playAudio('aud-leopard')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td>Leopardo</td></tr>
+        <tr><td>Lizard</td><td class="audio-col"><audio id="aud-lizard" src="lizard.mp3"></audio><button class="play-btn" onclick="playAudio('aud-
